@@ -82,7 +82,7 @@ if hindcast:
 
 #%% ===== CALIBRATION OPTIONS =====
 # Calibration option ('emulator', 'MCMC', 'MCMC_fullsim' 'HH2015', 'HH2015mod', None)
-option_calibration = 'MCMC'
+option_calibration = 'HH2015'
 
 # Prior distribution (specify filename or set equal to None)
 priors_reg_fullfn = main_directory + '/../Output/calibration/priors_region.csv'
@@ -187,7 +187,7 @@ elif option_calibration in ['MCMC', 'MCMC_fullsim']:
 # Hugonnet geodetic mass balance data
 hugonnet_fp = main_directory + '/../DEMs/Hugonnet2020/'
 #hugonnet_fn = 'df_pergla_global_20yr-filled.csv'
-hugonnet_fn = 'df_pergla_global_20yr-filled-FAcorrected.csv'
+hugonnet_fn = 'df_pergla_global_20yr-filled.csv'
 if '-filled' in hugonnet_fn:
     hugonnet_mb_cn = 'mb_mwea'
     hugonnet_mb_err_cn = 'mb_mwea_err'
@@ -213,7 +213,7 @@ icethickness_cal_frac_byarea = 0.9  # Regional glacier area fraction that is use
 
 #%% ===== SIMULATION AND GLACIER DYNAMICS OPTIONS =====
 # Glacier dynamics scheme (options: 'OGGM', 'MassRedistributionCurves', None)
-option_dynamics = 'OGGM'
+option_dynamics = 'None'
     
 # Bias adjustment option (options: 0, 1, 2, 3) 
 #  0: no adjustment
